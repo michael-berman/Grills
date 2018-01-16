@@ -6,7 +6,6 @@ class Flash
 
   def initialize(req)
     cookie = req.cookies['_grills_app_flash']
-    # TODO: change to grills app
     @now = cookie ? JSON.parse(cookie) : {}
     @flash = {}
   end

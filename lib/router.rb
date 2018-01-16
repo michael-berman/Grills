@@ -34,8 +34,6 @@ class Router
     @routes << route
   end
 
-  # evaluate the proc in the context of the instance
-  # for syntactic sugar :)
   def draw(&proc)
     instance_eval(&proc)
   end
