@@ -2,8 +2,6 @@ require 'rack'
 require_relative '../lib/controller_base'
 require_relative '../lib/router'
 
-#Controller for portfolio
-
 class PortfolioController < ControllerBase
 
   def index
@@ -20,7 +18,6 @@ class PortfolioController < ControllerBase
 
 end
 
-#Routes for app
 router = Router.new
 router.draw do
   get Regexp.new("^/$"), PortfolioController, :index
