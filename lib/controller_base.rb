@@ -51,10 +51,19 @@ class ControllerBase
   end
 
   def render(template_name)
-    path = "views/#{self.class.name.underscore}/#{template_name}.html.erb"
-    content = ERB.new(File.read(path)).result(binding)
-    content_type = 'text/html'
-    render_content(content, content_type)
+    dir_path = File.dirname(__FILE__)
+    template_fname = File.join(
+      dir_path[0..-4], 'DemoGrills/app',
+      "views", self.class.name.underscore, "#{template_name}.html.erb"
+    )
+
+    template_code = File.read(template_fname)
+
+    debugger
+    render_content(
+      ERB.new(template_code).result(binding),
+      "text/html"
+    )
   end
 
   def session
