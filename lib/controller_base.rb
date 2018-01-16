@@ -59,7 +59,6 @@ class ControllerBase
 
     template_code = File.read(template_fname)
 
-    debugger
     render_content(
       ERB.new(template_code).result(binding),
       "text/html"
