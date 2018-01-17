@@ -59,7 +59,6 @@ class FileServer
   end
 
   def requested_file_name(env)
-    debugger
     req = Rack::Request.new(env)
     path = req.path
     dir = File.dirname(__FILE__)

@@ -7,6 +7,8 @@ router.draw do
   get Regexp.new("^/$"), DemoController, :index
 end
 
+DBConnection.instance
+
 app = Proc.new do |env|
   req = Rack::Request.new(env)
   res = Rack::Response.new
