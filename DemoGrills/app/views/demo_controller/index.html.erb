@@ -1,1 +1,16 @@
+
+
 <h1>Projects</h1>
+
+<% @projects.each do |project| %>
+  <h2><%= project.title %></h2><br>
+  <img src=<%= project.image_url %> /><br>
+  <ol>
+    <% project.steps.each do |step| %>
+      <li>
+        <h3><%= step.title %></h3><br>
+        <p><%= step.description %><p><br>
+      </li>
+    <% end %>
+  </ol>
+<% end %>
