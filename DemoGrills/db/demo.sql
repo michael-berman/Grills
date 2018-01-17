@@ -1,6 +1,7 @@
 CREATE TABLE projects (
   id INTEGER PRIMARY KEY,
-  title VARCHAR(255) NOT NULL
+  title VARCHAR(255) NOT NULL,
+  image_url VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE steps (
@@ -12,20 +13,13 @@ CREATE TABLE steps (
   FOREIGN KEY(project_id) REFERENCES step(id)
 );
 
-CREATE TABLE photos (
-  id INTEGER PRIMARY KEY,
-  url VARCHAR(255) NOT NULL,
-  step_id INTEGER
-
-  FOREIGN KEY(step_id) REFERENCES step(id)
-);
-
-
 INSERT INTO
-  projects (id, title)
+  projects (id, title, image_url)
 VALUES
-  (1, "How to build your own BBQ Barrel"),
-  (2, "Inverted Bookshelf");
+  (1, "How to build your own BBQ Barrel",
+    "https://i.imgur.com/Sv8Ekww.jpg"),
+  (2, "Inverted Bookshelf",
+    "https://i.imgur.com/NJnWHsM.jpg");
 
 INSERT INTO
   steps (id, title, description, project_id)
@@ -74,17 +68,4 @@ VALUES
    (9, "Add Brackets and Attach to Wall",
       "Now that you know that the shelf itself is stable, add a couple
       of brackets to the other side of the board. Then simply screw it
-      into the wall.", 2)
-
-INSERT INTO
-  photos (id, url, step_id)
-VALUES
-  (1, "https://i.imgur.com/afbtn6i.jpg", 1),
-  (2, "https://i.imgur.com/dpRWyzG.jpg", 2),
-  (3, "https://i.imgur.com/h5fD5YI.jpg", 3),
-  (4, "https://i.imgur.com/NBUod94.jpg", 4),
-  (5, "https://i.imgur.com/lUVGZYl.jpg", 5),
-  (6, "https://i.imgur.com/8HP32g6.jpg", 6),
-  (7, "https://i.imgur.com/RZJTeaB.jpg", 7),
-  (8, "https://i.imgur.com/sMrPdZQ.jpg", 8),
-  (9, "https://i.imgur.com/kE09d93.jpg", 9),
+      into the wall.", 2);
