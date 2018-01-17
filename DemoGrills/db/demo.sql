@@ -79,4 +79,12 @@ VALUES
 INSERT INTO
   photos (id, url, step_id)
 VALUES
-  (1, "Breakfast", 1),
+  (1, "https://i.imgur.com/afbtn6i.jpg", 1),
+  (2, "https://i.imgur.com/dpRWyzG.jpg", 2),
+  (3, "https://i.imgur.com/h5fD5YI.jpg", 3),
+  (4, "https://i.imgur.com/NBUod94.jpg", 4),
+  (5, "https://i.imgur.com/lUVGZYl.jpg", 5),
+  (6, "https://i.imgur.com/8HP32g6.jpg", 6),
+  (7, "https://i.imgur.com/RZJTeaB.jpg", 7),
+  (8, "https://i.imgur.com/sMrPdZQ.jpg", 8),
+  (9, "https://i.imgur.com/kE09d93.jpg", 9),
