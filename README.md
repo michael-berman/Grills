@@ -7,7 +7,7 @@ instantiated from a controller base.
 
 ## Features & Implementations
 
-### ORM
+### Object Relational Mapping
 Since the Grills ORM is inspired by the ActiveRecord framework in Rails, it converts SQL tables into an instance of the Grills::SQLObject class.
 
 Methods of the Grills' ORM includes:
@@ -22,16 +22,21 @@ Methods of the Grills' ORM includes:
     * ::all
     * ::find
 
-### Views
+### Controller & Views
+A controller base was implemented similar to the Application Controller in the controllers design of Rails. Routes are created by a r
 
-
-### Controller
+### Other Features
+* Flash errors
+* Storing cookies
+* Exceptions and stack trace
+* Add images, texts or zipped files
 
 ## Libraries & Technologies
 * Puma
 * Rack
 * ERB
 * SQL
+* Active Support
 
 ## Future Features
 * Generation of framework in terminal
