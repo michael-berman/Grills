@@ -8,6 +8,11 @@ instantiated from a controller base.
 ## Features & Implementations
 
 ## Libraries & Technologies
-*
-*
-* 
+* Puma
+* Rack
+* ERB
+* SQL
+
+## Future Features
+* Generation of framework in terminal
+* Render forms in templates
