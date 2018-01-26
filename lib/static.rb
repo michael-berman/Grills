@@ -1,7 +1,4 @@
-require 'byebug'
-
 class Static
-
   attr_reader :app, :root, :file_server
   def initialize(app)
     @app = app
