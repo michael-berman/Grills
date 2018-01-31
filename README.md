@@ -30,7 +30,8 @@ class DemoController < ControllerBase
 end
 ```
 
-To create models, make sure they inherit from SQLObject:
+To create models, create the model's parameters in SQL in the demo.sql file
+and make sure the model files inherit from SQLObject:
 ```
 require_relative '../../../lib/orm/sql_object'
 
