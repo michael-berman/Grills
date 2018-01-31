@@ -5,6 +5,14 @@ where object relational mapping is used for associates and search queries,
 views are rendered as templates using ERB templating and controllers are
 instantiated from a controller base.
 
+## How to use the script
+First, make sure to clone the repo:
+
+```
+git clone https://github.com/michael-berman/Grills 
+```
+
+
 ## Features & Implementations
 
 ### Object Relational Mapping
