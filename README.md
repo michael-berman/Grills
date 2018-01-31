@@ -12,13 +12,14 @@ First, make sure to clone the repo:
 git clone https://github.com/michael-berman/Grills
 ```
 
-Rename DemoGrills to the app name of your choice. Create your controllers and models in the app folder under the [appname] folder. When creating controllers, make sure they inherit from ControllerBase:
+Rename DemoGrills to the app name of your choice. Create your controllers and models in the app folder under the [appname] folder. To create controllers, make sure they inherit from ControllerBase:
 ```
 require_relative '../../../lib/controller_base'
 require_relative '../../../lib/orm/db_connection'
 require_relative '../../../lib/orm/sql_object'
 require_relative '../../../lib/orm/searchable'
 require_relative '../../../lib/orm/associatable'
+
 class DemoController < ControllerBase
 
   def index
@@ -29,14 +30,28 @@ class DemoController < ControllerBase
 end
 ```
 
-When creating models, make sure they inherit from SQLObject:
+To create models, make sure they inherit from SQLObject:
 ```
 require_relative '../../../lib/orm/sql_object'
 
 class Project < SQLObject
   has_many :steps
 end
+
+Project.finalize!
 ```
+
+To create views, make sure the folder inside views is the snake case form of the corresponding controller (in this case demo_controller).
+
+### Demo the provided app
+
+To demo the DemoGrills app, simply clone the repo and then type in the following within your terminal to run the serve:
+
+```
+bundle exec ruby DemoGrills/demo_server.rb
+```
+
+Visit localhost:3000 to see the demo app in action.
 
 ## Features & Implementations
 
