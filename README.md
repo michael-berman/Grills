@@ -45,7 +45,7 @@ To create views, make sure the folder inside views is the snake case form of the
 
 ### Demo the provided app
 
-To demo the DemoGrills app, simply clone the repo and then type in the following within your terminal to run the serve:
+To demo the DemoGrills app, simply clone the repo and then type in the following within your terminal to run the server:
 
 ```
 bundle exec ruby DemoGrills/demo_server.rb
