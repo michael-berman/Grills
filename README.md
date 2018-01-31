@@ -9,9 +9,34 @@ instantiated from a controller base.
 First, make sure to clone the repo:
 
 ```
-git clone https://github.com/michael-berman/Grills 
+git clone https://github.com/michael-berman/Grills
 ```
 
+Rename DemoGrills to the app name of your choice. Create your controllers and models in the app folder under the [appname] folder. When creating controllers, make sure they inherit from ControllerBase:
+```
+require_relative '../../../lib/controller_base'
+require_relative '../../../lib/orm/db_connection'
+require_relative '../../../lib/orm/sql_object'
+require_relative '../../../lib/orm/searchable'
+require_relative '../../../lib/orm/associatable'
+class DemoController < ControllerBase
+
+  def index
+    @projects= Project.all
+    render :index
+  end
+
+end
+```
+
+When creating models, make sure they inherit from SQLObject:
+```
+require_relative '../../../lib/orm/sql_object'
+
+class Project < SQLObject
+  has_many :steps
+end
+```
 
 ## Features & Implementations
 
