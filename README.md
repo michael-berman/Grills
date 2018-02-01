@@ -13,7 +13,8 @@ git clone https://github.com/michael-berman/Grills
 ```
 
 Rename DemoGrills to the app name of your choice. Create your controllers and models in the app folder under the [appname] folder. To create controllers, make sure they inherit from ControllerBase:
-```
+
+```ruby
 require_relative '../../../lib/controller_base'
 require_relative '../../../lib/orm/db_connection'
 require_relative '../../../lib/orm/sql_object'
@@ -32,7 +33,8 @@ end
 
 To create models, create the model's parameters in SQL in the demo.sql file
 and make sure the model files inherit from SQLObject:
-```
+
+```ruby
 require_relative '../../../lib/orm/sql_object'
 
 class Project < SQLObject
